@@ -24,6 +24,7 @@ public class URLController {
     @GetMapping({"/", "/index"})
     public String index1(Model model){
     	System.out.println("hi");
+    	System.out.println("get data");
         model.addAttribute("employee",new Employee());
         return "index";
     }
