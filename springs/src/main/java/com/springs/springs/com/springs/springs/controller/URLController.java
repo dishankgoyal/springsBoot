@@ -23,6 +23,7 @@ public class URLController {
 
     @GetMapping({"/", "/index"})
     public String index1(Model model){
+    	System.out.println("hi");
         model.addAttribute("employee",new Employee());
         return "index";
     }
