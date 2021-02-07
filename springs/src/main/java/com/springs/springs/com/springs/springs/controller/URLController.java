@@ -36,7 +36,7 @@ public class URLController {
             System.out.println (error.getObjectName() + " - " +error.getDefaultMessage());
         }
         System.out.print(employee.getName()); //use a logger instead
-
+        System.out.println("get data");
         empService.save(employee);
         System.out.print(bindingResult.toString());
         return "result"; //may want to return a different page name for clarity
