@@ -21,6 +21,7 @@ public class URLController {
 
     @GetMapping({"/", "/index"})
     public String index1(ModelMap model){
+    	System.out.println("hi");
        model.addAttribute("login",new Login());
         return "index";
     }
@@ -28,9 +29,10 @@ public class URLController {
     @PostMapping("/adminDashBoard")
     public String adminDashBoard(@ModelAttribute @Valid Login login,BindingResult bindingResult, @ModelAttribute Boolean htmlResult){
         if(bindingResult.hasErrors()){
+        	System.out.println("bye");
             return "index";
         }
-
+        
         else{
             boolean result=loginService.loginChcek(login);
             if(result){
