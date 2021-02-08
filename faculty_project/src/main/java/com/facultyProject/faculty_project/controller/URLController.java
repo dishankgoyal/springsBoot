@@ -34,6 +34,7 @@ public class URLController {
         }
         
         else{
+        	System.out.println("bye");
             boolean result=loginService.loginChcek(login);
             if(result){
             return "adminDashBoard";}
